@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Question 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .formskeleton{
+            
+            background-color: #E9ECEF;
+            text-align: center;
+            margin: auto;
+            padding: 20px;
+            align-content: center;
+            font-size: 2em;
+            width:70%;
+            height: 700px;
+            position: relative;
+            top:20px;
+        }
+        .input_tag_style{
+            width: 400px;
+        }
+        .button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: auto;
+        align-content: center;
+        }
+        .icon{
+            padding: 5px;
+            background: #172749;
+            color: white;
+            width: 10%;
+            text-align: center;
+        }
+        .a{
+            display: inline;
+        }
+        td{
+            width: 50%;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="get_full_len">
+            <table class="formskeleton">
+                <tr>
+                    <td>
+                        <label for="fullname">Full Name </label>
+                    </td>
+                    <td>
+                        <div class="a">
+                            <i class="fa fa-user icon"></i>
+                            <input type="text" name="fullname" id="fullname" class='input_tag_style' placeholder="full name" required>
+                        </div>
+                    </td>
+                </tr>
+    
+    
+                <tr>
+                    <td>
+                        <label for="a1">Address Line 1 </label>
+                    </td>
+                    <td>
+                        <div class="a">
+                            <i class="fa fa-address-book icon"></i>
+                            <input type="text" name="a1" id="a1" class='input_tag_style' placeholder="Address Line 1" required>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="a2">Address Line 2 </label>
+                    </td>
+                    <td>
+                        <div class="a">
+                            <i class="fa fa-address-book icon"></i>
+                            <input type="text" name="a2" id="a2" class='input_tag_style' placeholder="Address Line 2" required>
+                        </div>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label for="city">City </label>
+                    </td>
+                    <td>
+                        <div class="a">
+                            <i class="fa fa-building icon"></i>
+                            <input type="text" name="city" id="city" class='input_tag_style' placeholder="city" required>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="state">State/Province/Region </label>
+                    </td>
+                    <td>
+                        <div class="a">
+                            <i class="fa fa-map-marker icon"></i>
+                            <input type="text" name="state" id="state" class='input_tag_style' placeholder="State/Province/Region" required>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="zip">Postal code / ZIP</label>
+                    </td>
+                    <td>
+                        <div class="a">
+                            <i class="fa fa-envelope icon"></i>
+                            <input type="text" name="zip" id="zip" class="input_tag_style" placeholder="Postal code / ZIP" required>
+                        </div>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <label for="country">Country</label>
+                    </td>
+                    <td>
+                        <div class="a">
+                            <i class="fa fa-map-marker icon"></i>
+                            <select name="country" id="country" class="input_tag_style" required> 
+                                <option value="1">India</option>
+                                <option value="2">Sri Lanka</option>
+                                <option value="3">China</option>
+                                <option value="4">Pakistan</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="email">Email: </label>
+                    </td>
+                    <td>
+                        <div class="a">
+                            <i class="fa fa-user icon"></i>
+                            <input type="email" name="email" id="email" class="input_tag_style" placeholder="Email" required>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="phone">Phone: </label>
+                    </td>
+                    <td>
+                        <div class="a">
+                            <i class="fa fa-user icon"></i>
+                            <input type="number" name="phone" id="phone" class="input_tag_style" placeholder="Phone" required>
+                        </div>
+                    </td>
+                </tr>
+
+                <br>
+
+
+                <tr>
+                    <td colspan="2" style="align-content: center;">
+                        <button class="button" type="submit" onclick="but()">Submit</button>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        
+    </form>
+    <script>
+        var b = document.getElementsByClassName('button');
+        var but = function(){
+            alert('Thanks for giving the input');
+        }
+    </script>
+    
+</body>
+</html>
