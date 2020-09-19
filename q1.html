@@ -133,7 +133,7 @@
 
                 <tr>
                     <td colspan="2" style="align-content: center;">
-                        <button class="button" type="submit" onclick="but()">Submit</button>
+                        <button class="button" type="submit" onclick="myfun()">Submit</button>
                     </td>
                 </tr>
 
@@ -143,10 +143,72 @@
         
     </form>
     <script>
-        var b = document.getElementsByClassName('button');
-        var but = function(){
-            alert('Thanks for giving the input');
+        function myfun() {
+        if (validationForm()) {
+            alert('Thanks for submitting the form succesfully.');
         }
+        }
+
+        function validationForm() {
+
+        if (document.myForm.fullname.value == "") {
+            alert("Please provide your name!");
+            document.myForm.fullname.focus();
+            return false;
+        }
+
+        if (document.myForm.a1.value == "") {
+            alert("Please provide your Address!");
+            document.myForm.a1.focus();
+            return false;
+        }
+        if (document.myForm.a2.value == "") {
+            alert("Please provide your Address!");
+            document.myForm.a2.focus();
+            return false;
+        }
+
+        if (document.myForm.city.value == "") {
+            alert("Please provide your City!");
+            document.myForm.city.focus();
+            return false;
+        }
+
+        if (document.myForm.state.value == "") {
+            alert("Please provide your State!");
+            document.myForm.state.focus();
+            return false;
+        }
+
+        if (document.myForm.zip.value == "" || isNaN(document.myForm.zip.value) ||
+            document.myForm.zip.value.length !== 5) {
+
+            alert("Please provide a zip in the format #####.");
+            document.myForm.zip.focus();
+            return false;
+        }
+
+
+        if (document.myForm.country.value == "0") {
+            alert("Please select your country!");
+            return false;
+        }
+
+        if (document.myForm.mobile.value.length !== 10) {
+            alert("Please submit your 10 digit mobile number");
+            return false;
+        }
+
+
+        if (document.myForm.email.value == "") {
+            alert("Please provide your Email!");
+            document.myForm.email.focus();
+            return false;
+        }
+
+        return true;
+        }
+
     </script>
     
 </body>
